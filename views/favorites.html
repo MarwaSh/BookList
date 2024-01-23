@@ -1,0 +1,22 @@
+<div>
+    <h1>Favorites Page</h1>
+
+    <div ng-repeat="book in favoriteBooks track by book.etag">
+        <div class="book-item">
+            <h2>{{ book.volumeInfo.title }}</h2>
+            <p>{{ book.volumeInfo.authors.join(', ') }}</p>
+            <p>{{ book.volumeInfo.description }}</p>
+            <button ng-click="openBookDetailsModal(book)">Show More</button>
+            <button ng-click="removeFromFavorites(book)">Remove from Favorites</button>
+        </div>
+    </div>
+
+
+    
+<!-- Link to books page -->
+<div class="go-to-books">
+    <a href="#!/books">Go to Books</a>
+</div>
+
+
+</div>

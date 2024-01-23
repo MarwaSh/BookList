@@ -1,0 +1,14 @@
+<md-dialog>
+    <md-content class="md-dialog-content">
+        <md-button ng-click="closeModal()" class="md-icon-button md-accent">
+            <md-icon aria-label="Close">X</md-icon>
+        </md-button>
+        <h2>{{ bookDetails.volumeInfo.title }}</h2>
+        <p>Publisher: {{ bookDetails.volumeInfo.publisher }}</p>
+        <p>Page Count: {{ bookDetails.volumeInfo.pageCount }}</p>
+        <div>
+            <img ng-src="{{ bookDetails.volumeInfo.imageLinks.thumbnail }}" alt="Book Thumbnail">
+        </div>
+        <p>{{ bookDetails.volumeInfo.description }}</p>
+    </md-content>
+</md-dialog>

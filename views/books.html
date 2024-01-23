@@ -1,0 +1,30 @@
+<h1>Books Page</h1>
+
+<div>
+    <input type="text" ng-model="searchQuery" placeholder="Search...">
+    <button ng-click="searchBooks()">Search</button>
+</div>
+
+<div ng-repeat="book in books">
+    <div class="book-item">
+        <h2>{{ book.volumeInfo.title }}</h2>
+        <p>{{ book.volumeInfo.authors.join(', ') }}</p>
+        <p>{{ book.volumeInfo.description }}</p>
+        <button ng-click="openBookDetailsModal(book)">Show More</button>
+        <button ng-click="toggleFavorite(book)">
+            {{ isFavorite(book) ? 'Remove from Favorites' : 'Add to Favorites' }}
+        </button>
+    </div>
+</div>
+
+
+<div>
+    <button ng-click="fetchPreviousPage()" ng-disabled="currentPage === 1">Previous Page</button>
+    <span>Page {{ currentPage }}</span>
+    <button ng-click="fetchNextPage()">Next Page</button>
+</div>
+
+<!-- Link to favorites page -->
+<div class="go-to-favorites">
+    <a href="#!/favorites">Go to Favorites</a>
+</div>

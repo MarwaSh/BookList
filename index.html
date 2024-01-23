@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BooksApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Favorites Organizer</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Include AngularJS and Angular Router scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    
+    <!-- Include Angular Animate and Angular Aria scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+
+    <!-- Include Angular Material scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.0/angular-material.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.0/angular-material.min.js"></script>
+
+    <!-- Include your AngularJS application and controllers -->
+    <script src="index.js"></script>
+    <script src="controllers/LoginController.js"></script>
+    <script src="controllers/BooksController.js"></script>
+    <script src="controllers/FavoritesController.js"></script>
+    <script src="controllers/book-details-modal.js"></script>
+    <script src="services/BooksService.js"></script>
+    <script src="services/FavoritesService.js"></script>
+</head>
+<body>
+
+<div ng-view></div>
+
+</body>
+</html>
